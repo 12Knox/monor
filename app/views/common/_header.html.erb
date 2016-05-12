@@ -1,0 +1,24 @@
+<header id="header">
+  <nav class="main_navigation">
+  <p class="header_phrase">The way you ride is the way you live.</p>
+  <h1><%= link_to "Monor", root_path %></h1>
+<% if user_signed_in? %>
+  <p class="profile_image"><%= image_tag(current_user.avatar) %></p>
+      <p class="profile_name"><%= link_to "#{current_user.nickname}", user_path(current_user) %></p>
+    <ul class="nav_self">
+      <li class="each_nav"><%= link_to "Develop", '/products/new/' %></li>
+      <li class="each_nav"><%= link_to "Liked", root_path %></li>
+      <li class="each_nav"><%= link_to "Edit", '/products/edit/' %></li>
+    </ul>
+    <% else %>
+    <ul class="nav_self">
+      <li class="each_nav"><%= link_to "Signup", '/users/sign_up/' %></li>
+      <li class="each_nav"><%= link_to "News", root_path %></li>
+      <li class="each_nav"><%= link_to "Contact", '/contact/' %></li>
+      <li class="each_nav"><%= link_to "Login", '/users/sign_in/' %></li>
+    </ul>
+    <% end %>
+  </nav>
+</header>
+
+

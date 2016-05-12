@@ -1,0 +1,50 @@
+<div class="contents_wrap clearfix">
+  <div class="left_contents">
+    <nav>
+      <ul>
+        <% if user_signed_in? %>
+        <li class="menu_lists"><%= link_to "Logout from User", destroy_user_session_path, method: :delete %></li>
+        <li class="menu_lists">
+<div class="panel panel-default">
+  <div class="panel-heading">
+  </div>
+  <div class="panel-body">
+    <%= search_form_for(@search, method: :get) do |f| %>
+      <div class="row">
+      <div class="col-sm-6">
+          <div class="form-group">
+            <%= f.text_field :products_name_or_concept_cont, class: "form-control", placeholder: "乗り物名もしくはコンセプトで検索" %>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <%= f.text_field :price_lt, class: "form-control", placeholder: "入力金額以下で検索" %>
+        </div>
+      </div>
+      <%= f.submit '検索', class: "btn btn-primary" %>
+      <%= link_to 'クリア', url_for, class: "btn btn-default" %>
+    <% end %>
+  <div>
+</div>
+        <% else %>
+        <p>これは左メニュー</p>
+        <p>これは左メニュー</p>
+        <p>これは左メニュー</p>
+        <p>これは左メニュー</p>
+        <p>これは左メニュー</p>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+  <div class="right_contents">
+  <% if user_signed_in? %>
+  <%= render partial: 'common/products' %>
+  </div>
+  <% else %>
+  <div class="not_login_view">
+    <h3 class="not_login_view_title">This is Monor Website.</h3>
+    <section class="not_login_view_contents">
+    <%= render partial: 'common/blog' %>
+  <% end %>
+</div>
+</div>

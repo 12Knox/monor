@@ -1,0 +1,12 @@
+<div class="user_profile">
+  <p><%= link_to "プロフィール編集", edit_user_path(current_user) %></p>
+</div>
+<div class="my_products clearfix">
+  <p><%= @nickname %>さんの投稿一覧</p>
+    <% @products.each do |product| %>
+    <div class="product_master">
+    <p class="product_image"><%= image_tag product.image %></p>
+    <p class="product_concept"><%= simple_format(product.concept) %></p>
+    </div>
+    <% end %>
+</div>

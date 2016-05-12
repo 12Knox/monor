@@ -1,0 +1,11 @@
+<div id="products_list">
+<% @products.each do |product| %>
+<div class="products_contents">
+      <h3><%= product.products_name %></h3>
+      <p>価格：<%= product.price %>円</p>
+      <p>コンセプト：<%= product.concept %></p>
+      <p><%= image_tag("#{product.image}", :width => '500', :height => 'auto') %></p>
+      <p class="delete_btn"><%= link_to 'Delete', "/products/#{product.id}", method: :delete %></p>
+    </div>
+<% end %>
+</div>

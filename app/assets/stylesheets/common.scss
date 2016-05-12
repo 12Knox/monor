@@ -1,0 +1,405 @@
+// mixin
+@mixin baseBox($margin: 10px, $padding: 10px) {
+    padding: $padding;
+    margin: $margin;
+}
+
+$base: #FDBD00;
+$text: #333333;
+$gray: #888;
+
+//setting
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+* {
+  font-family: 'Noto Sans Japanese', serif !important;
+}
+html,body {
+  height: 100%;
+}
+body {
+  background-color: #eeeeee !important;
+}
+
+/* Smartphones CSS */
+
+@media screen and (min-width: 0px) and (max-device-width: 475px) {
+body,input,textarea,table,h1,h2,h3,h4,h5,h6 {
+  letter-spacing: 0.1em;
+  font-size: 0.5em;
+  color: #333333;
+}
+
+h1 {
+  font-size: 0.9em;
+  width: 100%;
+  margin: 0 auto;
+}
+h2 {
+  font-size: 1em;
+}
+h3 {
+  font-size: 0.9em;
+}
+h4,h5,h6 {
+  font-size: 0.8em;
+}
+
+ a {
+  text-decoration: none;
+  color: #333333;
+}
+
+li.each_nav a {
+  text-decoration: none;
+  color: #333333;
+  &:hover {
+    border-bottom: solid 2px #333333;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+header#header {
+  background: #FDBD00;
+  box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.3);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
+
+header p.header_phrase {
+  color: #333333;
+  font-size: 0.4em;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+header h1 {
+  color: #333333;
+  font-size: 72px;
+  font-weight: lighter;
+  letter-spacing: 35px;
+  width: 100%;
+  margin-top: 5px;
+  text-align: center;
+  z-index: 50;
+}
+
+ul.nav_self {
+  display: block;
+  float: left;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+ul li.each_nav {
+  float: left;
+  padding:0 10px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.contents_wrap {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 250px;
+  overflow: hidden;
+}
+
+
+ul li.menu_lists a {
+  font-size: 1.1em;
+  color: #333333;
+  margin-bottom: 10px;
+  &:hover{
+  color: #999999;
+  }
+}
+
+div.right_contents {
+  float: right;
+  width: 100%;
+  height: 100%;
+  min-height: 800px;
+}
+
+div.each_rides {
+  float: left;
+  margin: 25px;
+  margin-bottom: 60px;
+  width: 350px;
+  height: auto;
+  min-height: 450px;
+  background: #000000;
+}
+
+.each_rides_title {
+  color: #ffffff;
+  font-size: 1.2em;
+  padding-left: 20px;
+}
+
+div.not_login_view {
+  width: 100%;
+  height: auto;
+  min-height: 1200px;
+  margin-top: 50px;
+}
+
+h3.not_login_view_title {
+  font-size: 2.5em;
+  font-weight: lighter;
+  margin-top: -50px;
+}
+
+section.not_login_view_contents {
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+}
+
+footer#footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #eeeeee;
+}
+
+footer#footer small {
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+
+}
+@media screen and (min-width: 476px) and (max-device-width: 920px) {
+}
+
+/* Desktops CSS */
+
+@media screen and (min-width: 911px)  {
+
+body,input,textarea,table,h1,h2,h3,h4,h5,h6 {
+  letter-spacing: 0.1em;
+  font-size: 0.8em;
+  color: #333333;
+}
+
+h1 {
+  font-size: 1.2em;
+}
+h2 {
+  font-size: 1em;
+}
+h3 {
+  font-size: 0.9em;
+}
+h4,h5,h6 {
+  font-size: 0.8em;
+}
+
+ a {
+  text-decoration: none;
+  color: #333333;
+}
+
+li.each_nav a {
+  text-decoration: none;
+  color: #333333;
+  &:hover {
+    border-bottom: solid 2px #333333;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+header#header {
+  background: #FDBD00;
+  box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.3);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-width: 1024px;
+  height: 200px;
+}
+
+header p.header_phrase {
+  color: #333333;
+  font-size: 0.4em;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  width: 100%;
+  margin-top: -10px;
+  padding-top: 50px;
+  padding-left: 55px;
+}
+
+header h1 {
+  color: #333333;
+  font-size: 72px;
+  font-weight: lighter;
+  letter-spacing: 25px;
+  width: 100%;
+  margin-top: -20px;
+  padding-left: 50px;
+  z-index: 50;
+}
+
+ul.nav_self {
+  display: block;
+  float: right;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  z-index: 50;
+  margin-top: -100px;
+}
+
+ul li.each_nav {
+  float: left;
+  padding-right: 20px;
+  font-size: 1.2em;
+}
+
+p.profile_image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -170px;
+  z-index: -20;
+}
+
+p.profile_image img {
+  width: 100px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+}
+
+p.profile_name {
+  font-size: 1.5em;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -60px;
+}
+
+p.profile_name a {
+width: 100px;
+}
+
+.contents_wrap {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 250px;
+  overflow: hidden;
+}
+
+div.left_contents {
+  float: left;
+  width: 20%;
+  min-height: 800px;
+  position: fixed;
+}
+
+ul li.menu_lists a {
+  font-size: 1.1em;
+  color: #333333;
+  margin-bottom: 10px;
+  &:hover{
+  color: #999999;
+  }
+}
+
+div.right_contents {
+  float: right;
+  width: 80%;
+  height: 100%;
+  min-height: 800px;
+}
+
+div.middle_contents {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+div.each_rides {
+  float: left;
+  margin: 25px;
+  margin-bottom: 60px;
+  width: 350px;
+  height: auto;
+  min-height: 450px;
+  background: #000000;
+}
+
+.each_rides_title {
+  color: #ffffff;
+  font-size: 1.2em;
+  padding-left: 20px;
+}
+
+div.not_login_view {
+  width: 100%;
+  height: auto;
+  min-height: 1200px;
+  margin-top: 50px;
+}
+
+h3.not_login_view_title {
+  font-size: 2.5em;
+  font-weight: lighter;
+  margin-top: -50px;
+}
+
+section.not_login_view_contents {
+  width: 100%;
+  max-width: 890px;
+  height: auto;
+  min-height: 600px;
+}
+
+footer#footer {
+  width: 100%;
+  min-width: 1024px;
+  position: fixed;
+  bottom: 0;
+  background: #eeeeee;
+}
+
+footer#footer small {
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+}

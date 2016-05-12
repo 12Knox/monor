@@ -1,0 +1,9 @@
+<div class="products_post_contents">
+  <%= form_tag('/products', method: :post) do %>
+    <input placeholder="Products Name" type="text" name="products_name">
+    <input placeholder="Price" type="text" name="price">
+    <input placeholder="Image" type="text" name="image">
+    <textarea cols="50" name="concept" placeholder="concept"></textarea>
+    <input type="submit" value="SENT">
+  <% end %>
+</div>
